@@ -4,10 +4,10 @@ from rest_framework.routers import DefaultRouter
 from .views import CommentViewSet, GroupViewSet, PostViewSet
 
 
-router = DefaultRouter()
+v1_router = DefaultRouter()
 
 router.register('posts', PostViewSet, basename='posts')
-router.register('posts/(?P<post_id>\\d+)/comments', CommentViewSet,
+router.register('posts/(?P<post_id>\d+)/comments', CommentViewSet,
                 basename='comments')
 router.register('groups', GroupViewSet, basename='groups')
 
